@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Just Added.</title>
+</head>
+<body>
+<h1>Contact App.</h1>
+
+<h1>Result</h1>
+
+
+<table>
+    <tr>
+
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <td>Phone</td>
+        <td>Actions</td>
+    </tr>
+    <tr th:each="conte:${allcontact}">
+        <td th:text="${conte.name}"></td>
+        <td th:text="${conte.lname}"></td>
+        <td th:text="${conte.email}"></td>
+        <td th:text="${conte.tel}"></td>
+        <td>
+            <a th:href="@{/update/{id}(id=${conte.id})}">Update</a>
+            <a th:href="@{/delete/{id}(id=${conte.id})}">Delete</a>
+        </td>
+    </tr>
+</table>
+
+
+
+<a href="/addcontact">Submit another contact</a>
+
+<p><a href="/welcome">Go back to main menu.</a></p>
+
+
+</body>
+</html>

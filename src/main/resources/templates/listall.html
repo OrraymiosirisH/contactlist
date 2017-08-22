@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>My Contacts</title>
+</head>
+<body>
+<th:block th:each="con:${listofcontact}">
+    <p th:text="'Name:'+ ${con.name}"/>
+    <p th:text="'Last Name:'+ ${con.lname}" />
+    <p th:text="'Email:'+ ${con.email}" />
+    <p th:text="'Phone#:'+ ${con.tel}" />
+
+</th:block>
+
+<p><a href="/welcome">Go back to main menu.</a></p>
+
+</body>
+</html>
