@@ -20,7 +20,7 @@ public class MainController {
     NewcontactRepo newcontactRepo;
 
 
-   @RequestMapping("/welcome01")
+   @RequestMapping("/")
    public String sayHello(){
 
        return "welcome01";
